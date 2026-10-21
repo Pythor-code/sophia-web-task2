@@ -1,22 +1,35 @@
 # North Star Bakery
 
 Four-page client website for Sophia Introduction to Web Development.
-Touchstone 3 adds shared CSS to the HTML built in Touchstone Task 2.
+Task 2 supplies semantic HTML and media; Touchstone 3 adds responsive CSS;
+Touchstone 4 adds JavaScript favorites, localStorage, and form validation.
 
 ## Preview
-Open index.html, or run `python3 -m http.server 8000` in Codespaces
-and open the forwarded port. This command previews existing files;
-it is not part of the website. No JavaScript is used.
+https://pythor-code.github.io/sophia-web-task2/
 
-## Files
-index.html, products.html, about.html, contact.html, styles.css,
-and the provided bakery images and welcome audio in media/.
+## Run in Codespaces
+Open this repository in GitHub Codespaces, run `python3 -m http.server 8000`,
+and open forwarded port 8000. No package installation or build is needed.
 
-## Design
-Cream #FFF8F0, brown #6B3E26, peach #D88C5A, charcoal #2F2A26.
-Georgia headings and Arial body text. Mobile-first Flexbox layout;
-the larger-screen media query starts at 48rem.
+## Touchstone 4 files
+- products.html: save, remove, and clear bakery favorites.
+- contact.html: restored favorites and nearby form error messages.
+- bakery.js: product records, selected IDs, storage functions, and validation rules.
+- styles.css: existing mobile-first design plus interaction and error styles.
+- index.html and about.html: existing content, relative navigation, and media.
+- media/: the provided bakery images and welcome audio.
 
-All addresses, staff, prices, and opening hours are fictional classroom
-content. The form demonstrates native browser validation and does not
-send a real bakery inquiry. Use fictional test entries only.
+Favorites store only product IDs under northStarBakery.favorites.v1 in localStorage.
+They reload on products/contact pages and can be cleared. Names, email addresses,
+request text, and allergy information are never stored. Blocked or malformed
+storage does not crash the site; a visible message explains the limitation.
+
+The form checks required fields, email format, and text lengths. Invalid entries
+remain in place so they can be corrected. Valid entries display confirmation
+that the checks passed; this classroom form does not send inquiries or orders.
+All business addresses, staff, hours, and prices are fictional classroom content.
+
+## Checks performed
+Favorites save/remove/clear, reload restoration, cross-page restoration,
+empty/invalid/valid form input, preserved input, console error check, relative
+navigation and images. Four pages checked at 320, 390, 768, and 1440px widths.

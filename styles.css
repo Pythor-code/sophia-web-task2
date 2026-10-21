@@ -148,3 +148,21 @@ footer a { color: var(--cream); }
 
 .contact-layout > p { max-width: none; }
 
+
+/* Touchstone 4 adds accessible favorites and validation feedback. */
+[hidden] { display: none !important; }
+.products-layout > .favorites-panel { flex-basis: 100%; }
+.favorites-panel { border: 2px solid var(--peach); padding: 1.5rem; border-radius: .35rem; }
+.favorite-controls { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; }
+.favorite-controls button[aria-pressed="false"] { background: var(--cream); color: var(--brown); }
+.favorite-controls button[aria-pressed="false"]:hover { background: var(--brown); color: var(--cream); }
+.favorite-controls button[aria-pressed="true"] { background: var(--brown); color: var(--cream); }
+#favorite-summary ul { padding-left: 1.3rem; margin: .5rem 0 1rem; }
+#favorite-status { font-weight: 700; }
+#storage-note { font-size: .9rem; margin-top: 1rem; }
+#clear-favorites { margin-bottom: 1rem; }
+.saved-favorites { border-top: 2px solid var(--peach); padding-top: 1rem; margin-top: 2rem; }
+.field-error { display: block; font-weight: 700; margin-top: .4rem; color: var(--brown); }
+.field-error:empty { display: none; }
+[aria-invalid="true"] { border: 3px solid var(--brown); }
+.form-status:not(:empty) { border-left: 4px solid var(--brown); padding: .8rem 1rem; margin-top: 1rem; }

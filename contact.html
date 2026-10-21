@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact and Pre-orders | North Star Bakery</title>
 <link rel="stylesheet" href="styles.css">
+<script src="bakery.js" defer></script>
 </head>
 <body class="contact-page">
   <a href="#main-content">Skip to main content</a>
@@ -31,41 +32,48 @@
         Maple Grove, MN 55311</address>
       <p>Tuesday-Friday: 7 a.m.-5 p.m.<br>
         Saturday-Sunday: 8 a.m.-2 p.m.<br>Monday: Closed.</p>
-    </section>
+    <div class="saved-favorites" aria-labelledby="saved-heading">
+<h3 id="saved-heading">Your saved favorites</h3>
+<div id="favorite-summary"></div>
+<p id="favorite-status" role="status" aria-live="polite"></p>
+<p><a href="products.html">Choose or change favorites</a></p>
+<p id="storage-note">Favorites stay in this browser. Contact details are not saved.</p>
+</div></section>
     <section>
       <h2>Send an inquiry</h2>
       <p id="form-help">Fields marked (required) must be filled
         in. This classroom form checks your entries locally;
         it does not send a request to a bakery.</p>
-      <form action="contact.html" method="get" aria-describedby="form-help">
+      <form action="contact.html" method="get" aria-describedby="form-help" id="inquiry-form">
         <fieldset>
           <legend>Your contact information</legend>
           <p><label for="customer-name">Name (required)</label><br>
-            <input id="customer-name" name="customer_name" type="text" autocomplete="name" required minlength="2" maxlength="80"></p>
+            <input id="customer-name" name="customer_name" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="customer-name-error"><span id="customer-name-error" class="field-error" aria-live="polite"></span></p>
           <p><label for="email">Email (required)</label><br>
-            <input id="email" name="email" type="email" autocomplete="email" required maxlength="120"></p>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" aria-describedby="email-error"><span id="email-error" class="field-error" aria-live="polite"></span></p>
         </fieldset>
         <fieldset>
           <legend>Your bakery request</legend>
           <p><label for="request-type">
             Request type (required)</label><br>
-            <select id="request-type" name="request_type" required>
+            <select id="request-type" name="request_type" required aria-describedby="request-type-error">
               <option value="">Choose a request type</option>
               <option value="preorder">Pre-order inquiry</option>
               <option value="question">General question</option>
-            </select></p>
+            </select><span id="request-type-error" class="field-error" aria-live="polite"></span></p>
           <p><label for="pickup-date">Preferred pickup date
             (for pre-orders)</label><br>
-            <input id="pickup-date" name="pickup_date" type="date"></p>
+            <input id="pickup-date" name="pickup_date" type="date" aria-describedby="pickup-date-error"><span id="pickup-date-error" class="field-error" aria-live="polite"></span></p>
           <p><label for="details">Item details or question
             (required)</label><br>
-            <textarea id="details" name="details" rows="5" cols="40" required minlength="10" maxlength="1000"></textarea></p>
+            <textarea id="details" name="details" rows="5" cols="40" required minlength="10" maxlength="1000" aria-describedby="details-error"></textarea><span id="details-error" class="field-error" aria-live="polite"></span></p>
           <p><label for="allergies">
             Allergy notes (optional)</label><br>
-            <textarea id="allergies" name="allergy_notes" rows="3" cols="40" maxlength="500"></textarea></p>
+            <textarea id="allergies" name="allergy_notes" rows="3" cols="40" maxlength="500" aria-describedby="allergies-error"></textarea><span id="allergies-error" class="field-error" aria-live="polite"></span></p>
         </fieldset>
         <button type="submit">Check request details</button>
-      </form>
+      <p id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+</form>
     </section>
   </main>
   <footer>
