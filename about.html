@@ -2,27 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About the Bakery | North Star Bakery</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="about-page">
   <a href="#main-content">Skip to main content</a>
   <header>
     <a href="index.html">
-      <img src="media/bakery-logo_c.png"
-           alt="North Star Bakery home" width="160">
+      <img src="media/bakery-logo_c.png" alt="North Star Bakery home" width="160">
     </a>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="about.html" aria-current="page">About the Bakery</a></li>
-        <li><a href="contact.html">Contact and Pre-orders</a></li>
+        <li><a href="contact.html" class="nav-request">Contact and Pre-orders</a></li>
       </ul>
     </nav>
   </header>
-  <main id="main-content">
+  <main id="main-content" class="about-layout">
     <h1>A Bakery for Our Neighbors</h1>
     <section>
       <h2>Our story</h2>
@@ -49,13 +48,12 @@
       <h2>A welcome from the bakery</h2>
       <p>Play our short welcome message to meet the bakery.</p>
       <audio controls preload="metadata">
-        <source src="media/bakery-welcome_c.mp3"
-                type="audio/mpeg">
+        <source src="media/bakery-welcome_c.mp3" type="audio/mpeg">
         Your browser does not support audio playback.
-        <a href="media/bakery-welcome_c.mp3">
+        <a href="media/bakery-welcome_c.mp3" class="text-link">
           Download the bakery welcome message</a>.
-      </audio>
-      <p><a href="media/bakery-welcome_c.mp3">
+      </source></audio>
+      <p><a href="media/bakery-welcome_c.mp3" class="text-link">
         Download the audio welcome</a>. You can also read
         about our story, ingredients, and team on this page.</p>
     </section>
@@ -63,7 +61,7 @@
   <footer>
     <p>North Star Bakery: handmade for our neighborhood.</p>
     <p><a href="contact.html">Ask about a pre-order</a></p>
-    <small>&copy; 2026 North Star Bakery</small>
+    <small>© 2026 North Star Bakery</small>
   </footer>
 </body>
 </html>

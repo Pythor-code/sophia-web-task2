@@ -2,27 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact and Pre-orders | North Star Bakery</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="contact-page">
   <a href="#main-content">Skip to main content</a>
   <header>
     <a href="index.html">
-      <img src="media/bakery-logo_c.png"
-           alt="North Star Bakery home" width="160">
+      <img src="media/bakery-logo_c.png" alt="North Star Bakery home" width="160">
     </a>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="about.html">About the Bakery</a></li>
-        <li><a href="contact.html" aria-current="page">Contact and Pre-orders</a></li>
+        <li><a href="contact.html" aria-current="page" class="nav-request">Contact and Pre-orders</a></li>
       </ul>
     </nav>
   </header>
-  <main id="main-content">
+  <main id="main-content" class="contact-layout">
     <h1>Contact and Pre-order Requests</h1>
     <p>Tell us what you would like to pick up or ask a question.
       A request is not a confirmed order.</p>
@@ -38,18 +37,13 @@
       <p id="form-help">Fields marked (required) must be filled
         in. This classroom form checks your entries locally;
         it does not send a request to a bakery.</p>
-      <form action="contact.html" method="get"
-            aria-describedby="form-help">
+      <form action="contact.html" method="get" aria-describedby="form-help">
         <fieldset>
           <legend>Your contact information</legend>
           <p><label for="customer-name">Name (required)</label><br>
-            <input id="customer-name" name="customer_name"
-                   type="text" autocomplete="name"
-                   required minlength="2" maxlength="80"></p>
+            <input id="customer-name" name="customer_name" type="text" autocomplete="name" required minlength="2" maxlength="80"></p>
           <p><label for="email">Email (required)</label><br>
-            <input id="email" name="email" type="email"
-                   autocomplete="email" required
-                   maxlength="120"></p>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="120"></p>
         </fieldset>
         <fieldset>
           <legend>Your bakery request</legend>
@@ -62,18 +56,13 @@
             </select></p>
           <p><label for="pickup-date">Preferred pickup date
             (for pre-orders)</label><br>
-            <input id="pickup-date" name="pickup_date"
-                   type="date"></p>
+            <input id="pickup-date" name="pickup_date" type="date"></p>
           <p><label for="details">Item details or question
             (required)</label><br>
-            <textarea id="details" name="details" rows="5"
-                      cols="40" required minlength="10"
-                      maxlength="1000"></textarea></p>
+            <textarea id="details" name="details" rows="5" cols="40" required minlength="10" maxlength="1000"></textarea></p>
           <p><label for="allergies">
             Allergy notes (optional)</label><br>
-            <textarea id="allergies" name="allergy_notes"
-                      rows="3" cols="40"
-                      maxlength="500"></textarea></p>
+            <textarea id="allergies" name="allergy_notes" rows="3" cols="40" maxlength="500"></textarea></p>
         </fieldset>
         <button type="submit">Check request details</button>
       </form>
@@ -82,7 +71,7 @@
   <footer>
     <p>North Star Bakery: handmade for our neighborhood.</p>
     <p><a href="contact.html">Ask about a pre-order</a></p>
-    <small>&copy; 2026 North Star Bakery</small>
+    <small>© 2026 North Star Bakery</small>
   </footer>
 </body>
 </html>

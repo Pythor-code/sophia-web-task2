@@ -1,0 +1,150 @@
+/* North Star Bakery: shared, mobile-first design. */
+:root {
+  --cream: #fff8f0;
+  --brown: #6b3e26;
+  --peach: #d88c5a;
+  --charcoal: #2f2a26;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: Arial;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+a { color: var(--brown); text-underline-offset: 0.22em; }
+a:hover { text-decoration-thickness: 0.15em; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, audio:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 4px;
+}
+body > a:first-child {
+  position: absolute;
+  left: 1rem;
+  top: -6rem;
+  z-index: 10;
+  padding: 0.7rem 1rem;
+  background: var(--cream);
+  border: 2px solid var(--brown);
+}
+body > a:first-child:focus { top: 0.5rem; }
+header {
+  max-width: 76rem;
+  margin: auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--peach);
+}
+header > a { flex-shrink: 0; }
+header img { width: 100px; height: auto; display: block; }
+nav { width: 100%; }
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  min-height: 44px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+nav a[aria-current="page"] { box-shadow: inset 0 -3px var(--brown); }
+nav a:hover { background: var(--peach); color: var(--charcoal); }
+nav .nav-request { background: var(--brown); color: var(--cream); }
+main { max-width: 72rem; margin: auto; padding: 2.25rem 1.25rem 3.5rem; }
+h1, h2, h3 { font-family: Georgia; line-height: 1.18; color: var(--brown); }
+h1 { font-size: 2.25rem; font-weight: 400; margin: 0 0 1.1rem; }
+h2 { font-size: 1.65rem; margin: 0 0 1rem; }
+h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
+p { margin: 0 0 1.1rem; max-width: 65ch; }
+section { min-width: 0; margin-top: 2rem; }
+img { display: block; max-width: 100%; height: auto; border-radius: 0.35rem; }
+main img { width: 100%; }
+figure { margin: 1.75rem 0 0; }
+figcaption { margin-top: 0.65rem; font-size: 0.95rem; }
+address { font-style: normal; margin-bottom: 1rem; }
+.eyebrow { color: var(--brown); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; }
+.hero { display: flex; flex-direction: column; gap: 2rem; }
+.hero-copy { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.hero section { margin: 0; }
+.hero section h2 { font-size: 1.25rem; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 0.8rem; }
+.button, button {
+  display: inline-block;
+  background: var(--brown);
+  color: var(--cream);
+  border: 2px solid var(--brown);
+  border-radius: 0.25rem;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover, button:hover { background: var(--charcoal); }
+.home-details { display: flex; flex-direction: column; gap: 2rem; margin-top: 3rem; }
+.home-details section { margin: 0; border-top: 3px solid var(--peach); padding-top: 1.5rem; }
+.home-details picture { display: block; margin-bottom: 1.2rem; }
+.text-link { font-weight: 700; }
+.products-layout, .about-layout, .contact-layout {
+  display: flex; flex-direction: column; gap: 1.75rem;
+}
+.products-layout > section, .about-layout > section,
+.contact-layout > section { margin-top: 0; }
+.products-layout > section, .about-layout > section {
+  border-top: 2px solid var(--peach); padding-top: 1.5rem;
+}
+.products-layout img { max-width: 30rem; }
+audio { width: 100%; max-width: 30rem; margin: 0.5rem 0 1rem; }
+fieldset { border: 1px solid var(--brown); border-radius: 0.25rem; margin: 0 0 1.5rem; padding: 1.2rem; min-width: 0; }
+legend { color: var(--brown); font-weight: 700; padding: 0 0.4rem; }
+label { display: inline-block; font-weight: 700; margin-bottom: 0.4rem; }
+input, select, textarea {
+  width: 100%; min-width: 0; min-height: 44px;
+  padding: 0.7rem; border: 1px solid var(--brown);
+  border-radius: 0.2rem; background: var(--cream);
+  color: var(--charcoal); font: inherit;
+}
+textarea { resize: vertical; }
+fieldset p:last-child { margin-bottom: 0; }
+footer { background: var(--brown); color: var(--cream); padding: 2rem 1.25rem; text-align: center; }
+footer p { margin: 0 auto 0.7rem; }
+footer a { color: var(--cream); }
+/* The larger-screen layout starts at 768px with normal font settings. */
+@media (min-width: 48rem) {
+  header { flex-direction: row; justify-content: space-between; padding: 1rem 2rem; }
+  nav { width: auto; }
+  nav ul { justify-content: flex-end; gap: 0.55rem; }
+  main { padding: 3.5rem 2rem 4.5rem; }
+  h1 { font-size: 3.5rem; }
+  .hero { flex-direction: row; gap: 3rem; align-items: center; }
+  .hero-copy { flex: 1.1; }
+  .hero > section { flex: 1; }
+  .home-details { flex-direction: row; gap: 3rem; }
+  .home-details > section { flex: 1; }
+  .products-layout, .about-layout, .contact-layout { flex-direction: row; flex-wrap: wrap; gap: 2rem; }
+  .products-layout > h1, .products-layout > p,
+  .about-layout > h1, .contact-layout > h1,
+  .contact-layout > p { flex-basis: 100%; }
+  .products-layout > section, .about-layout > section { flex: 1 1 calc(50% - 2rem); }
+  .contact-layout > section:first-of-type { flex: 1 1 28%; }
+  .contact-layout > section:last-of-type { flex: 2 1 60%; }
+}
+
+.contact-layout > p { max-width: none; }
+
